@@ -59,21 +59,21 @@ synthetic_data = [
 ## 2. Slipping into Distraction Mode
 This phase begins when a user diverts from productive content and starts moving toward potentially distracting content. We track their behavior to detect slipping into distraction based on the following steps:
 #### •	Detecting First Diversion:
-o	When the user switches from productive content (like educational or work-related videos) to non-productive content (like entertainment), we start monitoring.
-o	We track the first instance of content from the user’s identified “drug of choice” (recurring indulgent content) or any high-reward, non-productive genres.(here we are using drug of choice and metrics to identify if the person is engaging in another content which isn’t drug of choice but still a distraction .. but care is taken that the first preference is drug of choice)
-o	That is, if in 10 min window at any point of time the person indulges/interacts with his drug of choice then that will be flagged but if he uses other content that pattern will be detected.  
+1.	When the user switches from productive content (like educational or work-related videos) to non-productive content (like entertainment), we start monitoring.
+2.	We track the first instance of content from the user’s identified “drug of choice” (recurring indulgent content) or any high-reward, non-productive genres.(here we are using drug of choice and metrics to identify if the person is engaging in another content which isn’t drug of choice but still a distraction .. but care is taken that the first preference is drug of choice)
+3.	That is, if in 10 min window at any point of time the person indulges/interacts with his drug of choice then that will be flagged but if he uses other content that pattern will be detected.  
 #### •	10-Minute Observation Window:
-o	After detecting the first diversion, we allow a 10-minute window without any intervention.
-o	During this time, we monitor behavior but do not take action, giving the user a chance to self-correct.
+1.  After detecting the first diversion, we allow a 10-minute window without any intervention.
+2.	During this time, we monitor behavior but do not take action, giving the user a chance to self-correct.
 ##### •	Tracking Behavior Metrics:
-o	Content Switching Speed: Frequency and speed of switching between different content types.
-o	Time Between Switches: Time spent on each content type before switching.
-o	Scrolling Time: Duration spent scrolling without engaging with content.
-o	Content Repetition: Watching similar videos without exploring new topics.
-o	Drug of Choice Identification: Identifying whether the user is repeatedly engaging with their known distraction-prone content.
+1.	Content Switching Speed: Frequency and speed of switching between different content types.
+2.	Time Between Switches: Time spent on each content type before switching.
+3.	Scrolling Time: Duration spent scrolling without engaging with content.
+4.  Content Repetition: Watching similar videos without exploring new topics.
+5.	Drug of Choice Identification: Identifying whether the user is repeatedly engaging with their known distraction-prone content.
 ### •	Identifying Slipping into Distraction:
-o	If the user continues with distracting content beyond the 10-minute window and patterns of high switching speed, short time between switches, and engagement with their drug of choice emerge, we flag them as slipping into distraction.
-o	If the user returns to productive content within the 10-minute window, tracking is reset.
+1.	If the user continues with distracting content beyond the 10-minute window and patterns of high switching speed, short time between switches, and engagement with their drug of choice emerge, we flag them as slipping into distraction.
+2.  If the user returns to productive content within the 10-minute window, tracking is reset.
 
 ## 3. Nudging Mechanism (When Slipping from Focused State)
 When a user has been identified as slipping into distraction from a focused state, we deploy a three-step nudging mechanism to help them return to productive behavior(but all of these occur simultaneously:
@@ -90,9 +90,9 @@ o	This option is pushed lower in priority to subtly steer them toward more const
 ## 4. Tracking Full Distraction in Leisure State
 When the user is in a leisure state, we monitor whether their engagement turns into full distraction:
 •	Background Monitoring:
-o	While the user engages with entertainment content, the system tracks behavior without immediate intervention.
+1. 	While the user engages with entertainment content, the system tracks behavior without immediate intervention.
 •	Flagging Full Distraction:
-o	If the user indulges in their “drug of choice” or non-productive content for more than 45 minutes continuously, they are flagged as fully distracted.
-o	This information contributes to their distraction profile and helps tailor future nudging and recommendations.
+1.	If the user indulges in their “drug of choice” or non-productive content for more than 45 minutes continuously, they are flagged as fully distracted.
+2.	This information contributes to their distraction profile and helps tailor future nudging and recommendations.
 •	Tracking Metrics:
-o	Content switching speed, time between switches, scrolling time, content repetition, and engagement with the drug of choice continue to be monitored to assess the depth of distraction.
+1.  Content switching speed, time between switches, scrolling time, content repetition, and engagement with the drug of choice continue to be monitored to assess the depth of distraction.
