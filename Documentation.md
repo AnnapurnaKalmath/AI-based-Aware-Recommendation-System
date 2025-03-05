@@ -12,7 +12,8 @@ Can identify the current state by 3 kinds:
 3. Searches in the prompt/that is search area   (nlp)
 
 ## 1.User State Tracker 
-### Overview: This script determines whether a user’s current state is focused or leisure based on their behavior, like search activity, content engagement, and watch time patterns. It prioritizes early exit for efficiency and asks for user input only when needed.
+### Overview: 
+This script determines whether a user’s current state is focused or leisure based on their behavior, like search activity, content engagement, and watch time patterns. It prioritizes early exit for efficiency and asks for user input only when needed.
 ### Libraries Used:
 •	time: Simulates time-based behavior (not heavily used here).
 •	random: Generates synthetic data for testing.
@@ -78,17 +79,17 @@ This phase begins when a user diverts from productive content and starts moving 
 ## 3. Nudging Mechanism (When Slipping from Focused State)
 When a user has been identified as slipping into distraction from a focused state, we deploy a three-step nudging mechanism to help them return to productive behavior(but all of these occur simultaneously:
 
-1. Pop-Up Notification:
+#### 1. Pop-Up Notification:
    
 1.	A gentle reminder that they’ve been away from productive content for over 10 minutes.
 2.	Encouragement to return to their focused task.
 
-2. Highlight Previous Productive Content:
+#### 2. Highlight Previous Productive Content:
    
 1.  The system brings their previously watched productive content to the forefront.
 2.	Novelty recommendations related to their focused content are highlighted to capture interest and ease the transition back to productivity.
 
-3. Option to Resume First Diversion Content:
+#### 3. Option to Resume First Diversion Content:
 
 1.	The system offers the option to resume the first entertainment or non-productive content they switched to.
 2.	This option is pushed lower in priority to subtly steer them toward more constructive content.
